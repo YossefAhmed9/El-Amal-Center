@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:markaz_elamal/core/widgets/login/password_form_field.dart';
+import 'package:markaz_elamal/core/widgets/login/sign_in_button.dart';
 
-import '../utils/constant.dart';
-import '../utils/styles.dart';
-import 'form_field.dart';
+import '../../utils/constant.dart';
+import '../../utils/styles.dart';
+import 'email_form_field.dart';
 
 class FormWithEmailAndPassword extends StatelessWidget {
   const FormWithEmailAndPassword({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class FormWithEmailAndPassword extends StatelessWidget {
           child: Container(
             clipBehavior: Clip.antiAliasWithSaveLayer,
             width: 360,
-            height: MediaQuery.of(context).size.height*0.42,
+            height: MediaQuery.of(context).size.height*0.47,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
                 color: AppConstant.primaryColor),
@@ -35,7 +37,7 @@ class FormWithEmailAndPassword extends StatelessWidget {
               child: Container(
                 width: 200,
                 height: 200,
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
                     color: AppConstant.defaultColor,
                     borderRadius: BorderRadius.circular(40)),
@@ -54,9 +56,19 @@ class FormWithEmailAndPassword extends StatelessWidget {
                             .copyWith(color: Colors.white, fontFamily: 'Peralta'),
                       ),
                     ),
-                    DefaultFormField(),
-                    SizedBox(height: 20,),
-                    DefaultFormField(),
+                    const EmailFormField(),
+                    const SizedBox(height: 20,),
+                    const PasswordFormField(),
+                    const SignInButton(),
+                    TextButton(
+                        onPressed: (){},
+                        child: const Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                              color: AppConstant.primaryColor,fontSize: 20),
+                        ),
+                    ),
+
                   ],
                 ),
               ),
