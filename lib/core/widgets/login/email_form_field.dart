@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class DefaultFormField extends StatelessWidget {
-  const DefaultFormField({Key? key}) : super(key: key);
+class EmailFormField extends StatelessWidget {
+  const EmailFormField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var emailKey = GlobalKey<FormState>();
+    TextEditingController emailController=TextEditingController();
     return TextFormField(
+      key: emailKey,
+      controller: emailController,
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.mail_outline,
