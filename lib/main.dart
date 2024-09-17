@@ -1,6 +1,5 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:markaz_elamal/test.dart';
 import 'core/utils/app_router.dart';
 import 'core/utils/dependency_injection.dart';
 import 'features/authentication_view/authincation.dart';
