@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:markaz_elamal/core/widgets/login/sign_in_button.dart';
 
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
@@ -38,7 +39,7 @@ class ForgetPasswordBottomSheet extends StatelessWidget {
               child: Text('Email',style: Styles.textStyle25(context).copyWith(fontWeight: FontWeight.w600,color: Colors.black),),
             ),
             const EmailFormField(borderColor: Colors.black,iconColor: AppConstant.defaultColor,),
-
+const SignInButton(buttonColor: AppConstant.defaultColor,textColor: AppConstant.primaryColor,),
           ],
         ),
       ),
