@@ -1,18 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../core/utils/constant.dart';
-import '../../core/widgets/login/background_container.dart';
-import '../../core/widgets/login/form.dart';
-import '../../core/widgets/login/no_account.dart';
-import '../../core/widgets/login/sign_in_button.dart';
+import '../../core/widgets/login_widgets/background_container.dart';
+import '../../core/widgets/login_widgets/form.dart';
+import '../../core/widgets/login_widgets/no_account.dart';
 
 class Authentication extends StatelessWidget {
   const Authentication({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  const Scaffold(
       backgroundColor: AppConstant.defaultColor,
+
       body: SafeArea(
         child:  Stack(
           children: [
@@ -20,7 +19,7 @@ class Authentication extends StatelessWidget {
             Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                FormWithEmailAndPassword(),
+                LoginForm(),
                 Spacer(),
                 NoAccount(),
               ],

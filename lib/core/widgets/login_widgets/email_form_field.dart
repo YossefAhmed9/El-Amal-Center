@@ -10,11 +10,13 @@ final Color iconColor;
     var emailKey = GlobalKey<FormState>();
     TextEditingController emailController=TextEditingController();
     return TextFormField(
+      keyboardType: TextInputType.emailAddress,
       key: emailKey,
       controller: emailController,
       decoration: InputDecoration(
           prefixIcon:  Icon(
             Icons.mail_outline,
+            size: 35,
             color: iconColor,
           ),
           focusColor: Colors.white,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:markaz_elamal/core/widgets/login/sign_in_button.dart';
+import 'package:markaz_elamal/core/widgets/login_widgets/sign_in_button.dart';
 
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';

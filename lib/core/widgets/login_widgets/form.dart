@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:markaz_elamal/core/widgets/login/password_form_field.dart';
-import 'package:markaz_elamal/core/widgets/login/sign_in_button.dart';
-
+import 'package:markaz_elamal/core/widgets/login_widgets/password_form_field.dart';
+import 'package:markaz_elamal/core/widgets/login_widgets/sign_in_button.dart';
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
 import 'email_form_field.dart';
 import 'forget_password_bottom_sheet.dart';
+import 'forgot_password_button.dart';
+import 'logo_and_name.dart';
 
-class FormWithEmailAndPassword extends StatelessWidget {
-  const FormWithEmailAndPassword({Key? key}) : super(key: key);
+class LoginForm extends StatelessWidget {
+  const LoginForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,49 +43,22 @@ class FormWithEmailAndPassword extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppConstant.defaultColor,
                     borderRadius: BorderRadius.circular(40)),
-                child: Column(
+                child: const Column(
                   children: [
-                    //الصورة
-                    Image.asset(
-                      'assets/images/markaz_elamal.png',
-                      height: 94.03,
-                      width: 74,
-                    ),
-                    //الكلام نفسه
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
-                      child: Text(
-                        'Markaz ElAmal',
-                        style: Styles.textStyle16(context).copyWith(
-                            color: Colors.white, fontFamily: 'Peralta'),
-                      ),
-                    ),
-                    const EmailFormField(borderColor: AppConstant.primaryColor,iconColor: AppConstant.primaryColor,),
-                    const SizedBox(
+                    LogoAndName(),
+                    EmailFormField(borderColor: AppConstant.primaryColor,iconColor: AppConstant.primaryColor,),
+                    SizedBox(
                       height: 16,
                     ),
-                    const PasswordFormField(),
-                    const SignInButton(
+                    PasswordFormField(),
+                    SignInButton(
                       buttonColor: AppConstant.primaryColor,
                       textColor: AppConstant.defaultColor,
                       buttonWidth: 300,
                       buttonText: 'Sign In',
                       buttonHeight: 45,
                     ),
-                    TextButton(
-                      onPressed: () {
-                        showBottomSheet(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return const ForgetPasswordBottomSheet();
-                            });
-                      },
-                      child: Text(
-                        'Forgot password?',
-                        style: Styles.textStyle16(context)
-                            .copyWith(fontWeight: FontWeight.w600),
-                      ),
-                    ),
+                    ForgotPasswordButton(),
                   ],
                 ),
               ),
