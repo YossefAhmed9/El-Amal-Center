@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:markaz_elamal/core/utils/constant.dart';
 import 'package:markaz_elamal/core/utils/size_config.dart';
 
 abstract class Styles {
@@ -31,6 +32,7 @@ abstract class Styles {
       TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 16),
         fontWeight: FontWeight.w500,
+        color: AppConstant.primaryColor
       );
 
   static TextStyle textStyle17Bold(context) =>
