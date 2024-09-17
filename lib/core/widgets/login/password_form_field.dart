@@ -11,24 +11,24 @@ TextEditingController passController=TextEditingController();
       key: passwordKey,
       controller: passController,
       decoration: InputDecoration(
-          prefixIcon: Icon(
+          prefixIcon: const Icon(
             Icons.lock_outline,
             color: Colors.white,
           ),
           focusColor: Colors.white,
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25.0),
-            borderSide: BorderSide(
+            borderRadius: BorderRadius.circular(14.0),
+            borderSide: const BorderSide(
               color: Colors.white,
-              width: 2.0,
+              width: 1.0,
             ),
           ),
-          label: Text(
+          label: const Text(
             'Password',
             style: TextStyle(color: Colors.white),
           ),
           border: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.red,
             ),
             borderRadius: BorderRadius.circular(20),
