@@ -64,7 +64,13 @@ class FormWithEmailAndPassword extends StatelessWidget {
                       height: 16,
                     ),
                     const PasswordFormField(),
-                    const SignInButton(buttonColor: AppConstant.primaryColor,textColor: AppConstant.defaultColor,),
+                    const SignInButton(
+                      buttonColor: AppConstant.primaryColor,
+                      textColor: AppConstant.defaultColor,
+                      buttonWidth: 300,
+                      buttonText: 'Sign In',
+                      buttonHeight: 45,
+                    ),
                     TextButton(
                       onPressed: () {
                         showBottomSheet(
