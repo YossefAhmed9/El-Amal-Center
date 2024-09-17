@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:markaz_elamal/core/widgets/background_container.dart';
-import '../../core/widgets/form.dart';
 import '../../core/utils/constant.dart';
+import '../../core/widgets/login/background_container.dart';
+import '../../core/widgets/login/form.dart';
+import '../../core/widgets/login/no_account.dart';
+import '../../core/widgets/login/sign_in_button.dart';
 
 class Authentication extends StatelessWidget {
   const Authentication({super.key});
@@ -14,7 +17,14 @@ class Authentication extends StatelessWidget {
         child:  Stack(
           children: [
             BackgroundContainer(),
-            FormWithEmailAndPassword(),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                FormWithEmailAndPassword(),
+                Spacer(),
+                NoAccount(),
+              ],
+            ),
           ],
         ),
       ),
