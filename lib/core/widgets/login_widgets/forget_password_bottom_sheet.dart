@@ -3,7 +3,7 @@ import 'package:markaz_elamal/core/widgets/login_widgets/sign_in_button.dart';
 
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
-import 'email_form_field.dart';
+import 'default_form_field.dart';
 
 class ForgetPasswordBottomSheet extends StatelessWidget {
   const ForgetPasswordBottomSheet({Key? key}) : super(key: key);
@@ -38,8 +38,11 @@ class ForgetPasswordBottomSheet extends StatelessWidget {
               padding: const EdgeInsets.only(top: 30.0,bottom: 14),
               child: Text('Email',style: Styles.textStyle25(context).copyWith(fontWeight: FontWeight.w600,color: Colors.black),),
             ),
-            const EmailFormField(borderColor: Colors.black,iconColor: AppConstant.defaultColor,),
-            const SignInButton(
+            const DefaultFormField(borderColor: Colors.black,prefixIconColor: AppConstant.defaultColor,
+            hint: 'Password',prefix: Icons.lock_outline,suffix: null,suffixIconColor: null,hintColor: AppConstant.primaryColor,
+            ),
+             SignInButton(
+              onPress: (){},
               buttonColor: AppConstant.defaultColor,
               textColor: AppConstant.primaryColor,
               buttonWidth: 385,
