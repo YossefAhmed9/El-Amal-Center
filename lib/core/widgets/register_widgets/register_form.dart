@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:markaz_elamal/core/widgets/login_widgets/password_form_field.dart';
 import 'package:markaz_elamal/core/widgets/login_widgets/sign_in_button.dart';
 import 'package:markaz_elamal/core/widgets/register_widgets/name_form_field.dart';
+import 'package:markaz_elamal/features/success_view/success_view.dart';
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
-import '../login_widgets/email_form_field.dart';
+import '../login_widgets/default_form_field.dart';
 import '../login_widgets/forget_password_bottom_sheet.dart';
 import '../login_widgets/logo_and_name.dart';
 
 
 class RegisterForm extends StatelessWidget {
-  const RegisterForm({Key? key}) : super(key: key);
+  const RegisterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,16 +45,42 @@ class RegisterForm extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppConstant.defaultColor,
                     borderRadius: BorderRadius.circular(40)),
-                child: const Column(
+                child:  Column(
                   children: [
-                    LogoAndName(),
-                    NameFormField(borderColor: AppConstant.primaryColor, iconColor: AppConstant.primaryColor),
-                    EmailFormField(borderColor: AppConstant.primaryColor,iconColor: AppConstant.primaryColor,),
-                    SizedBox(
+                    const LogoAndName(),
+                    const NameFormField(borderColor: AppConstant.primaryColor, iconColor: AppConstant.primaryColor),
+                    const DefaultFormField(
+                      borderColor: AppConstant.primaryColor,
+                      prefixIconColor: AppConstant.primaryColor,
+                      hint: 'Email',
+                      prefix: Icons.mail_outline,
+                      suffix: null,
+                      suffixIconColor: null,
+                      hintColor: AppConstant.primaryColor,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16.0),
+                      child: DefaultFormField(
+                          borderColor: AppConstant.primaryColor,
+                          prefixIconColor: AppConstant.primaryColor,
+                          suffixIconColor: null,
+                          hint: 'Phone',
+                          suffix: null,
+                          prefix: Icons.phone_outlined,
+                        hintColor: AppConstant.primaryColor,
+                      ),
+                    ),
+
+                    const SizedBox(
                       height: 16,
                     ),
-                    PasswordFormField(),
+                    const PasswordFormField(),
                     SignInButton(
+                      onPress: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>const SuccessView()
+                       ));
+
+                      },
                       buttonColor: AppConstant.primaryColor,
                       textColor: AppConstant.defaultColor,
                       buttonWidth: 300,
