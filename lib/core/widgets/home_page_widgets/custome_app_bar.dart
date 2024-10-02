@@ -19,7 +19,11 @@ class CustomeAppBar extends StatelessWidget {
           padding: const EdgeInsets.only(top: 32.0,left: 9),
           child: Text(
             AppConstant.centerName,
-            style: Styles.textStyle16(context).copyWith(color: Colors.black,textBaseline:TextBaseline.alphabetic ),
+            style: Styles.textStyle16(context).copyWith(
+                color: Colors.black,
+                textBaseline:TextBaseline.alphabetic,
+            fontSize: 20
+            ),
 
           ),
         ),
