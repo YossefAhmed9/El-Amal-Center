@@ -1,0 +1,15 @@
+flutter_native_splash:
+    android:true
+    ios:true
+    web:true
+    color:"0XFF336EA6"
+    image:"assets/images/markaz_elamal.png"
+
+android 12:
+    android:true
+    ios:true
+    web:true
+    color:"0XFF336EA6"
+    image:"assets/images/markaz_elamal.png"
+
+

@@ -43,6 +43,15 @@ dependencies:
   get_it:
   dio:
   jwt_decoder:
+  flutter_native_splash:
+
+flutter_native_splash:
+  android:true
+  ios:true
+  web:true
+  color:"0XFF336EA6"
+  image:"assets/images/markaz_elamal.png"
+
 
 
 dev_dependencies:
