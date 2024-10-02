@@ -13,18 +13,19 @@ class CustomSearchBar extends StatelessWidget {
       padding: const EdgeInsets.only(top: 33, left: 24,bottom: 30),
       child: Row(
         children: [
-          Container(
-            decoration: const BoxDecoration(),
-            width: 310,
-            height: 50,
-            child: const DefaultFormField(
-              borderColor: AppConstant.defaultColor,
-              prefixIconColor: AppConstant.defaultColor,
-              suffixIconColor: null,
-              hint: 'Search',
-              suffix: null,
-              prefix: FontAwesomeIcons.magnifyingGlass,
-              hintColor: AppConstant.defaultColor,
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(),
+              height: 50,
+              child: const DefaultFormField(
+                borderColor: AppConstant.defaultColor,
+                prefixIconColor: AppConstant.defaultColor,
+                suffixIconColor: null,
+                hint: 'Search',
+                suffix: null,
+                prefix: FontAwesomeIcons.magnifyingGlass,
+                hintColor: AppConstant.defaultColor,
+              ),
             ),
           ),
           const SizedBox(
