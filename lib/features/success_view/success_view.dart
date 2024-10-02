@@ -17,9 +17,9 @@ class SuccessView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset('assets/images/success.png'),
-Text('Congratulations',style: Styles.textStyle35(context).copyWith(fontWeight: FontWeight.w900,color: AppConstant.defaultColor),),
-Text('Your Registration Is Success',style: Styles.textStyle20(context).copyWith(fontWeight: FontWeight.w400,),),
-Text('Welcome to our app',style: Styles.textStyle20(context),),
+            Text('Congratulations',style: Styles.textStyle35(context).copyWith(fontWeight: FontWeight.w900,color: AppConstant.defaultColor),),
+             Text('Your Registration Is Success',style: Styles.textStyle20(context).copyWith(fontWeight: FontWeight.w400,),),
+            Text('Welcome to our app',style: Styles.textStyle20(context),),
           ],
         ),
       ),
