@@ -32,7 +32,8 @@ abstract class Styles {
       TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 16),
         fontWeight: FontWeight.w500,
-        color: AppConstant.primaryColor
+        color: AppConstant.primaryColor,
+          fontFamily: 'Peralta'
       );
 
   static TextStyle textStyle17Bold(context) =>
