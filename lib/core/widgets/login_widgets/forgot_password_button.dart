@@ -4,7 +4,7 @@ import '../../utils/styles.dart';
 import 'forget_password_bottom_sheet.dart';
 
 class ForgotPasswordButton extends StatelessWidget {
-  const ForgotPasswordButton({Key? key}) : super(key: key);
+  const ForgotPasswordButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,10 @@ class ForgotPasswordButton extends StatelessWidget {
       },
       child: Text(
         'Forgot password?',
-        style: Styles.textStyle16(context)
-            .copyWith(fontWeight: FontWeight.w600),
+        style: Styles.textStyle16(context).copyWith(
+            fontSize: MediaQuery.of(context).size.height *0.015,
+            fontFamily: 'Poppins').copyWith(
+            fontWeight: FontWeight.w600),
       ),
     );
   }

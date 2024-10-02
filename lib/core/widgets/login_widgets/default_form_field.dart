@@ -1,23 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class EmailFormField extends StatelessWidget {
-  const EmailFormField({Key? key, required this.borderColor, required this.iconColor}) : super(key: key);
+class DefaultFormField extends StatelessWidget {
+  const DefaultFormField({
+    Key? key,
+    required this.borderColor,
+    required this.prefixIconColor,
+    required this.suffixIconColor,
+    required this.hint,
+    required this.suffix,
+    required this.prefix,
+    required this.hintColor}) : super(key: key);
+
 final Color borderColor;
-final Color iconColor;
+final Color prefixIconColor;
+final Color? suffixIconColor;
+final String hint;
+final IconData? suffix;
+final IconData prefix;
+final Color hintColor;
   @override
   Widget build(BuildContext context) {
     var emailKey = GlobalKey<FormState>();
     TextEditingController emailController=TextEditingController();
     return TextFormField(
+      validator: (String? value){
+        if (value!.isEmpty) {
+          return 'Field must be filled';
+        }
+        return null;
+      },
       keyboardType: TextInputType.emailAddress,
       key: emailKey,
       controller: emailController,
       decoration: InputDecoration(
+        suffixIcon:Icon(
+          suffix,
+          size: 35,
+          color: suffixIconColor,
+        ) ,
           prefixIcon:  Icon(
-            Icons.mail_outline,
+            prefix,
             size: 35,
-            color: iconColor,
+            color: prefixIconColor,
           ),
           focusColor: Colors.white,
           enabledBorder: OutlineInputBorder(
@@ -27,9 +52,9 @@ final Color iconColor;
               width: 1.0,
             ),
           ),
-          label: const Text(
-            'Email',
-            style: TextStyle(color: Colors.white),
+          label:  Text(
+            hint,
+            style:  TextStyle(color: hintColor,fontWeight: FontWeight.w600,fontSize: 15),
           ),
           border: OutlineInputBorder(
             borderSide: const BorderSide(
