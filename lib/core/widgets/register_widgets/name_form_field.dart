@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NameFormField extends StatelessWidget {
-  const NameFormField({Key? key, required this.borderColor, required this.iconColor}) : super(key: key);
+  const NameFormField({super.key, required this.borderColor, required this.iconColor});
   final Color borderColor;
   final Color iconColor;
   @override
