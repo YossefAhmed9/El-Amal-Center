@@ -2,6 +2,8 @@ abstract class AuthStates {}
 
 class AuthInitState extends AuthStates {}
 
+class GoToHome extends AuthStates{}
+
 class AuthGetDataLoadingState extends AuthStates {}
 
 class AuthGetDataDoneState extends AuthStates {}
