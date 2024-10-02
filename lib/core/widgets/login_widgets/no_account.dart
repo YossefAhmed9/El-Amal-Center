@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
+import 'package:markaz_elamal/features/register_view.dart';
 
 class NoAccount extends StatelessWidget {
   const NoAccount({Key? key}) : super(key: key);
@@ -11,7 +12,9 @@ class NoAccount extends StatelessWidget {
       children: [
         const Text('Don\'t have an account?',style: TextStyle(color: AppConstant.defaultColor,fontWeight: FontWeight.w700,fontSize: 15),),
         TextButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const RegisterView()));
+          },
           child: const Text(
             'Sign Up',
             style: TextStyle(
