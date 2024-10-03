@@ -15,10 +15,10 @@ class CategoryView extends StatelessWidget {
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
               gridDelegate:
-              const SliverGridDelegateWithFixedCrossAxisCount(
+               const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 20,
-                  mainAxisExtent: 230,
+                  mainAxisExtent: 245,
                   crossAxisSpacing: 0),
               itemBuilder: (context, index) {
                 return Padding(

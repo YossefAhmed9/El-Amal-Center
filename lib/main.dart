@@ -1,10 +1,13 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:markaz_elamal/core/api/dio_helper.dart';
 import 'package:markaz_elamal/core/bloc/auth_cubit/auth_cubit.dart';
+import 'package:markaz_elamal/core/bloc/book_cubit/book_cubit.dart';
 import 'package:markaz_elamal/core/bloc/home_cubit/home_cubit.dart';
+import 'package:markaz_elamal/core/bloc/profile_cubit/profile_cubit.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
 import 'package:markaz_elamal/features/home_layout/home_layout.dart';
 import 'core/utils/app_router.dart';
@@ -31,17 +34,18 @@ class HospitalApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider<AuthCubit>(create: (context)=>AuthCubit()),
+        BlocProvider<BookCubit>(create: (context)=>BookCubit()),
         BlocProvider<HomeCubit>(create: (context)=>HomeCubit()),
-
-        BlocProvider(create: (context)=>AuthCubit()),
+        BlocProvider<ProfileCubit>(create: (context)=>ProfileCubit()),
       ],
       child: MaterialApp(
-
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         onGenerateRoute: AppRouter.generateRoute,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true,
+          
           colorScheme: ColorScheme.fromSeed(seedColor: AppConstant.primaryColor,),
         ),
         home: const HomeLayout(),

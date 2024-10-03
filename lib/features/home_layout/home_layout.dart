@@ -17,6 +17,8 @@ class HomeLayout extends StatelessWidget {
       builder: (context, state) {
         var cubit=HomeCubit.get(context);
         return Scaffold(
+
+
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: const [
@@ -45,6 +47,7 @@ class HomeLayout extends StatelessWidget {
             elevation: 0,
           ),
           body: cubit.BottomNavBarscreens[cubit.navBarIndex],
+
         );
       },
     );
