@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
-import 'package:markaz_elamal/features/register_view.dart';
+import 'package:markaz_elamal/features/register_view/register_view.dart';
 
 class NoAccount extends StatelessWidget {
   const NoAccount({Key? key}) : super(key: key);
