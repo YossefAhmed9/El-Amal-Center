@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
 import 'package:markaz_elamal/features/authentication_view/authincation.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'core/bloc/onBoarding/onBoarding_cubit.dart';
-import 'core/bloc/onBoarding/onBoarding_states.dart';
-import 'core/utils/styles.dart';
+import '../../core/bloc/onBoarding/onBoarding_cubit.dart';
+import '../../core/bloc/onBoarding/onBoarding_states.dart';
+import '../../core/utils/styles.dart';
 import 'onBoarding_model.dart';
 
 class OnBoarding extends StatefulWidget {
