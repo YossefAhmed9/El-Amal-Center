@@ -8,7 +8,8 @@ import 'package:markaz_elamal/core/bloc/book_cubit/book_cubit.dart';
 import 'package:markaz_elamal/core/bloc/home_cubit/home_cubit.dart';
 import 'package:markaz_elamal/core/bloc/profile_cubit/profile_cubit.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
-import 'package:markaz_elamal/features/home_layout/home_layout.dart';
+import 'package:markaz_elamal/onBoarding_screen.dart';
+import 'core/bloc/onBoarding/onBoarding_cubit.dart';
 import 'core/utils/app_router.dart';
 import 'core/utils/dependency_injection.dart';
 
@@ -33,21 +34,22 @@ class HospitalApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider<onBoardingCubit>(create: (context)=>onBoardingCubit()),
         BlocProvider<AuthCubit>(create: (context)=>AuthCubit()),
         BlocProvider<BookCubit>(create: (context)=>BookCubit()),
         BlocProvider<HomeCubit>(create: (context)=>HomeCubit()),
         BlocProvider<ProfileCubit>(create: (context)=>ProfileCubit()),
       ],
       child: MaterialApp(
+
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         onGenerateRoute: AppRouter.generateRoute,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true,
-          
-          colorScheme: ColorScheme.fromSeed(seedColor: AppConstant.primaryColor,),
+          colorScheme: ColorScheme.fromSeed(seedColor: AppConstant.defaultColor,),
         ),
-        home: const HomeLayout(),
+        home:  OnBoarding(),
       ),
     );
   }
