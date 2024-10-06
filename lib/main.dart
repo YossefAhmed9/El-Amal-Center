@@ -8,7 +8,7 @@ import 'package:markaz_elamal/core/bloc/book_cubit/book_cubit.dart';
 import 'package:markaz_elamal/core/bloc/home_cubit/home_cubit.dart';
 import 'package:markaz_elamal/core/bloc/profile_cubit/profile_cubit.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
-import 'package:markaz_elamal/onBoarding_screen.dart';
+import 'package:markaz_elamal/features/onBoarding_view/onBoarding_screen.dart';
 import 'core/bloc/onBoarding/onBoarding_cubit.dart';
 import 'core/utils/app_router.dart';
 import 'core/utils/dependency_injection.dart';
@@ -23,7 +23,6 @@ void main() {
     enabled: kDebugMode,
     builder: (context) => const HospitalApp(), // Wrap your app
   ),);
- // FlutterNativeSplash.preserve(widgetsBinding:WidgetsFlutterBinding.ensureInitialized());
 
 }
 
