@@ -44,13 +44,10 @@ dependencies:
   dio:
   jwt_decoder:
   flutter_native_splash:
+  smooth_page_indicator:
 
-flutter_native_splash:
-  android:true
-  ios:true
-  web:true
-  color:"0XFF336EA6"
-  image:"assets/images/markaz_elamal.png"
+
+
 
 
 
@@ -64,6 +61,15 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: true
+  color: "#FFFFFF"
+  image: "assets/images/markaz_elamal.png"
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
