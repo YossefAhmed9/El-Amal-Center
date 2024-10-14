@@ -75,11 +75,15 @@ class _OnBoardingState extends State<OnBoarding> {
 
                   ),
                 ),
-                TextButton(onPressed: (){
+                TextButton(
+                  onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
                     return const Authentication();
                   }));
-                }, child: Text('Let\'s start with Sign up',
+                },
+                  child: Text(
+                  textAlign: TextAlign.start,
+                  'Let\'s start with Sign up',
                   style: Styles.textStyle25(context).copyWith(
                       color: AppConstant.defaultColor),
                 ),

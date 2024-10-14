@@ -1,6 +1,7 @@
-abstract class HomeStates{}
+abstract class HomeStates {}
 
-class HomeInitState extends HomeStates{}
+class HomeInitState extends HomeStates {}
 
-class HomeChangeBottomNavBarIndex extends HomeStates{}
-class GoToCategoryView extends HomeStates{}
+class HomeChangeBottomNavBarIndex extends HomeStates {}
+
+class GoToCategoryView extends HomeStates {}

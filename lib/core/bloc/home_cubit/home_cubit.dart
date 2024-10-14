@@ -28,7 +28,6 @@ class HomeCubit extends Cubit<HomeStates> {
   void GoToCategory(){
     navBarIndex=1;
     emit(GoToCategoryView());
-
   }
 
 }
