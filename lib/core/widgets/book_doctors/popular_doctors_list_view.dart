@@ -14,14 +14,15 @@ class PopularDoctorsListView extends StatelessWidget {
 
         itemBuilder: (context,index){
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: Container(
-              width: 150,height: 50,
+              width: 150,height: 55,
               decoration: BoxDecoration(
                 color: AppConstant.defaultColor,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Image.asset('assets/images/sara 1.png'),
                   Text('Doctor\'s name',style: Styles.textStyle14(context).copyWith(color: Colors.white),),

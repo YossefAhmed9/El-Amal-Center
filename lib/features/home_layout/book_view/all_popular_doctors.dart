@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:markaz_elamal/core/widgets/book_doctors_list_view/popular_doctors_list_view.dart';
 
 import '../../../core/utils/constant.dart';
 import '../../../core/utils/styles.dart';

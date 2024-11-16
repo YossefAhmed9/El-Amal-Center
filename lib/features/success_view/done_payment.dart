@@ -2,14 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
 
 import '../../core/utils/styles.dart';
+import '../home_layout/home_layout.dart';
 
-class SuccessView extends StatelessWidget {
-  const SuccessView({super.key});
+class PaymentDoneView extends StatelessWidget {
+  const PaymentDoneView({super.key});
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2)).then((value){
-    Navigator.pop(context);
+
+      Navigator.pushAndRemoveUntil(
+          context, MaterialPageRoute(builder: (context) => const HomeLayout()), (route) {
+        return false;
+      });
     });
 
     return Scaffold(
@@ -24,8 +29,7 @@ class SuccessView extends StatelessWidget {
             children: [
               Image.asset('assets/images/success.png'),
               Text('Congratulations',style: Styles.textStyle35(context).copyWith(fontWeight: FontWeight.w900,color: AppConstant.defaultColor),),
-               Text('Your Registration Is Success',style: Styles.textStyle20(context).copyWith(fontWeight: FontWeight.w400,),),
-              Text('Hope you\'r having a good day and better health',style: Styles.textStyle20(context),textAlign: TextAlign.center,),
+              Text('Your Appointment is Success',style: Styles.textStyle25(context).copyWith(fontWeight: FontWeight.w400,),),
             ],
           ),
         ),

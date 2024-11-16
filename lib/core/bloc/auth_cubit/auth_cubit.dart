@@ -11,10 +11,10 @@ class AuthCubit extends Cubit<AuthStates> {
   static AuthCubit get(context) => BlocProvider.of(context);
 
   void navigateToHome(BuildContext context){
-    Navigator.push(
-      context, MaterialPageRoute(
-        builder: (context) =>const HomeLayout()),
-    );
+    Navigator.pushAndRemoveUntil(
+        context, MaterialPageRoute(builder: (context) => const HomeLayout()), (route) {
+      return false;
+    });
     emit(GoToHome());
   }
 

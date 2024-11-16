@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../features/chat_view/all_chats_view.dart';
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
 
@@ -46,7 +47,9 @@ class CustomeAppBar extends StatelessWidget {
                   height: 40,
                   decoration: BoxDecoration(color: AppConstant.defaultColor,borderRadius: BorderRadius.circular(10)),
 
-                  child: IconButton(onPressed: (){}, icon:const Icon( FontAwesomeIcons.message,color: Colors.white,size: 20,),),
+                  child: IconButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>AllChatsView()));
+                  }, icon:const Icon( FontAwesomeIcons.message,color: Colors.white,size: 20,),),
                 ),
               ),
             ],

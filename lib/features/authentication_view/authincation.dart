@@ -23,7 +23,7 @@ class Authentication extends StatelessWidget {
           body: SafeArea(
             child: Stack(
               children: [
-                BackgroundContainer(),
+                //BackgroundContainer(),
                 Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [

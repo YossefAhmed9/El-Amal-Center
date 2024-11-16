@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../features/home_layout/book_view/doctor_profile.dart';
 import '../../utils/constant.dart';
 import '../../utils/styles.dart';
 
@@ -12,13 +13,15 @@ class BookDoctorsListView extends StatelessWidget {
       width: double.infinity,
       child: ListView.builder(
           scrollDirection: Axis.vertical,
-          physics: const NeverScrollableScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           itemCount: 10,
           itemBuilder: (context,index){
             return InkWell(
               enableFeedback: true,
               onTap: (){
-
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                  return const DoctorProfile();
+                }));
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -38,7 +41,6 @@ class BookDoctorsListView extends StatelessWidget {
                           children: [
                             Text('Doctor\'s name',style: Styles.textStyle25(context).copyWith(color: Colors.white),),
                             Text('Profession',style: Styles.textStyle18(context).copyWith(color: Colors.grey.shade400),),
-
                             const Spacer(),
                             const Row(
                               children: [
@@ -49,7 +51,7 @@ class BookDoctorsListView extends StatelessWidget {
                           ],
                         ),
                         const Spacer(),
-                        Image.asset('assets/images/sara 1.png')
+                        Image.asset('assets/images/sara 1.png',scale: 0.1,)
                       ],
                     ),
                   ),

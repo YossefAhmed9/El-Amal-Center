@@ -18,6 +18,11 @@ class HomeCubit extends Cubit<HomeStates> {
     const ProfileView()
   ];
 
+  double sliderValue = 20;
+  void ChangeSliderValue(double value) {
+    sliderValue = value;
+    emit(SliderValueChanged(sliderValue));
+  }
 
   int navBarIndex=0;
   void changeBottomNavBarIndex(int index){

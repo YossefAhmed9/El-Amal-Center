@@ -10,7 +10,7 @@ class NoAccount extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Don\'t have an account?',style: TextStyle(color: AppConstant.defaultColor,fontWeight: FontWeight.w700,fontSize: 15),),
+        const Text('Don\'t have an account?',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 15),),
         TextButton(
           onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>const RegisterView()));

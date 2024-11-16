@@ -13,7 +13,7 @@ class RegisterView extends StatelessWidget {
       backgroundColor: AppConstant.defaultColor,
       body: Stack(
         children:[
-          BackgroundContainer(),
+          //BackgroundContainer(),
 
           Column(
             mainAxisSize: MainAxisSize.max,
