@@ -7,6 +7,7 @@ import 'package:markaz_elamal/core/bloc/auth_cubit/auth_cubit.dart';
 import 'package:markaz_elamal/core/bloc/book_cubit/book_cubit.dart';
 import 'package:markaz_elamal/core/bloc/category_cubit/category_cubit.dart';
 import 'package:markaz_elamal/core/bloc/home_cubit/home_cubit.dart';
+import 'package:markaz_elamal/core/bloc/payment_cubit/payment_cubit.dart';
 import 'package:markaz_elamal/core/bloc/profile_cubit/profile_cubit.dart';
 import 'package:markaz_elamal/core/utils/constant.dart';
 import 'package:markaz_elamal/features/onBoarding_view/onBoarding_screen.dart';
@@ -42,6 +43,7 @@ class HospitalApp extends StatelessWidget {
         BlocProvider<BookCubit>(create: (context)=>BookCubit()),
         BlocProvider<ProfileCubit>(create: (context)=>ProfileCubit()),
         BlocProvider<ChatCubit>(create: (context)=>ChatCubit()),
+        BlocProvider<PaymentCubit>(create: (context)=>PaymentCubit()),
       ],
       child: MaterialApp(
 

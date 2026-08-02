@@ -45,6 +45,7 @@ dependencies:
   jwt_decoder:
   flutter_native_splash:
   smooth_page_indicator:
+  firebase_core: ^3.10.0
 
 
 

@@ -70,7 +70,7 @@ class CategoryView extends StatelessWidget {
                                           'assets/images/ai.png'),
                                     ),
                                     Text(
-                                      'Artificial Intelligence',
+                                      'Autism',
                                       textAlign: TextAlign.center,
                                       style: Styles.textStyle20(context)
                                           .copyWith(

@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:markaz_elamal/core/utils/styles.dart';
 import 'package:markaz_elamal/core/widgets/home_page_widgets/search_bar.dart';
 import 'package:markaz_elamal/core/widgets/home_page_widgets/see_more.dart';
-
 import '../../../core/bloc/home_cubit/home_cubit.dart';
 import '../../../core/bloc/home_cubit/home_states.dart';
 import '../../../core/widgets/home_page_widgets/categories_list_view.dart';
 import '../../../core/widgets/home_page_widgets/custome_app_bar.dart';
 import '../../../core/widgets/home_page_widgets/doctors_list_view.dart';
-import '../category_view/category_view.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -23,6 +20,7 @@ class HomePageView extends StatelessWidget {
       },
       builder: (context, state) {
         HomeCubit cubit=HomeCubit.get(context);
+
         return Scaffold(
           body: SafeArea(
             child: SingleChildScrollView(
